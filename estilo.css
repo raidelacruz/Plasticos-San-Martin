@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+  padding-top: 8px; /* ajusta según la altura de tu menú */
+}
+.tituloprin{
+    font-family:  helvetica-light-1,helvetica-light-2,Arial,Helvetica,sans-serif ;
+    font-weight: lighter;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(8, 8, 8);
+}
+.gaturro{
+    position: fixed;   /* permite fijar el elemento aunque haga scrolll */
+    top: 20px;            /* distancia desde arriba */
+    left: 10px;          /* distancia desde la derecha */
+    width: 100px;         /* tamaño opcional */
+    height: auto;
+    padding: 10px;
+
+}
+.nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;             /* ocupa todo el ancho */
+  background-color: white; /* fondo para que no se mezcle con lo de atrás */
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1); /* sombrita elegante */
+  z-index: 1000;           /* queda por encima de otros elementos */
+
+}
+
+.navegacion{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color:transparent;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    right: 20px;
+    gap: 50px;
+}
+.navegacion li a:hover{
+    background-color: rgb(73, 73, 240);
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+.navegacion a{
+    font-weight: lighter;
+    font-family: helvetica-light-1,helvetica-light-2,Arial,Helvetica,sans-serif ;
+    text-decoration: none;
+    color: rgb(73, 73, 240);
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* transición suave */
+
+}   
+
+.slider {
+    overflow: hidden;   /* oculta lo que sobra */
+  width: 100%;        /* ocupa todo el ancho de la página */
+
+}
+
+.galeria {
+    padding-top: 20px;
+  display: flex;
+  gap: 25px;
+  animation: animacion 12s linear infinite;
+}
+
+.galeria img {
+  width: 250px;
+  flex-shrink: 0; /* evita que se encojan */
+}
+
+
+@keyframes animacion {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* se mueve hasta la mitad porque duplicamos */
+  }
+}
